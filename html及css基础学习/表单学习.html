@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单学习</title>
+</head>
+<body>
+    <!-- 表单标签一般用于登录，注册等 -->
+    文本框： <input type="text">         <!--文本框，可输入单行文本-->
+    密码框： <input type="password">     <!-- 密码框，输入内容不可见 --> <br>
+    单选框   <input type="radio">           <!-- 单选框，多选一 --> <br>
+    多选框   <input type="checkbox">        <!-- 多选框，多选多 --> <br>
+    上传文件 <input type="file">          <!-- 上传文件功能 --> <br>
+    提交     <input type="submit" >         <!-- 提交按钮 --> 
+    重置    <input type="reset" >           <!-- 重置按钮 -->
+    普通按钮<input type="button" value="普通按钮">          <!-- 一个没有实际意义的按钮 -->
+    <hr>
+<!-- ------------------------------------------------------------------------- -->
+    <!-- placeholder用于在输入栏中显示提示字符 -->
+    文本框： <input type="text" placeholder=" 邮箱/用户名">         
+    密码框： <input type="password" placeholder="请输入密码">   <br>  
+    <br> <hr>
+    <!-- ------------------------------------------------------------------------- -->
+    <!--  用name属性将多个选项归为一组,checked将某一项设置为默认选项-->
+    性别：<input type="radio" name="gander">男 
+    <input type="radio" name="gander" checked>女
+    <input type="checkbox" checked>是否同意以上条款 <br>
+    <br> <hr>
+    <!-- ------------------------------------------------------------------------- -->
+    <!-- 用multiple属性让上传按钮可以一次性上传多个文件 -->
+    上传文件 <input type="file" multiple> <br>
+    <br> <hr>
+    <!-- ------------------------------------------------------------------------- -->
+    <!-- input按钮类 -->
+    <!-- 想要按钮能够起作用，必须配合表单域form标签，框住需要管理的表单范围 -->
+    <form ">
+        文本框： <input type="text" placeholder=" 邮箱/用户名">   <br>
+        <br>      
+        密码框： <input type="password" placeholder="请输入密码">   <br>  
+        <br>
+        <input type="submit">  <!-- 默认提交按钮，无需配合js可直接向后台传输数据 -->
+        <input type="reset" >   <!-- 默认重置按钮，可以重置所有文本框中的内容 -->
+        <!-- 在其中通过value属性让按钮显示指定数字 -->
+    </form> <hr>
+    <!-- ------------------------------------------------------------------------- -->
+    <!-- button标签（与input标签中的按钮部分类似 -->
+    <button>我是一个按钮</button>
+    <button type="submit">提交按钮</button>   <!-- chrome默认提交按钮，可直接提交数据 --> <br>
+    <br> <hr>
+    <!-- button可以通过js定制化功能，而input按钮只能实现几种特定功能 -->
+    <!-- ------------------------------------------------------------------------- -->
+    <!-- select下拉菜单标签 -->
+    所在城市：<select >
+        <option >北京</option>
+        <option >上海</option>
+        <option >广州</option>
+        <option >天津</option>
+        <option selected>重庆</option>
+    </select> <br>
+    <br> <hr>
+    <!-- ------------------------------------------------------------------------- -->
+    <!-- textarea文本域标签 -->
+    请输入文本：<textarea cols="20"></textarea> <br>
+    <br> <hr>
+    <!-- 一般通过css对其进行调整 -->
+    <!-- ------------------------------------------------------------------------- -->
+    <!-- lebel标签 用于绑定内容与表单标签的关系(点字也能选中)-->
+    性别：
+    <input type="radio" name="gender" id="male"><label for="male">男</label>   <!-- 方法1：在input后面加上lable标签，并让input标签中的id属性值等于lable标签中for属性的值 -->
+    <label ><input type="radio" name="gender">女</label>    <!-- 在input标签外直接套上一个lable标签，无需添加其他属性 -->
+    <br> <hr>
+    <!-- ------------------------------------------------------------------------- -->
+    <!-- 语义化标签 -->
+    <!-- 无语义标签 -->
+    <div>div标签，独占一行</div> 
+    <div>div标签，独占一行</div> 
+    <span>span标签，一行可现实多个  </span>  
+    <span>span标签，一行可现实多个</span>  <!-- div和span标签通常用于网页布局 -->
+    <br> <hr>
+    <!-- ------------------------------------------------------------------------- -->
+    <!-- 字符实体 -->
+    <!-- 最常用的是 &nbsp; 表示一个空格-->
+    <div>这是一段div标签下的&nbsp;&nbsp;&nbsp;&nbsp;文字</div>
+</body>
+</html>

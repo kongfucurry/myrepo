@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器</title>
+    <style>
+        /* 标签选择器 是以标签名命的选择器 */
+        p {
+            color: yellow;
+            background-color: aqua;
+        }
+        /* 标签选择器 所有选中的标签都会生效css代码 */
+        /* ---------------------------------------------------- */
+        .red {
+            color: red;
+        }
+        .size {
+            font-size: 30px;
+        }
+        /* 类选择器需要在style中定义，并且在目标标签中添加相应的class属性 */
+        /* 类的名命不能以数字和中划线开头 */
+        /* ------------------------------------------------------ */
+        #big {
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 标签选择器 -->
+    <p>我是一段p标签下的文字</p>
+    <p>我也是一段p标签下的文字</p>
+    <hr>
+    <!-- ---------------------------------------------------------- -->
+    <!-- 类选择器 -->
+    <div class="red size">这段文字是红色</div>
+    <!-- 一个标签可以使用多个类名，空格隔开 -->
+    <!-- ------------------------------------------------------ -->
+    <!-- id选择器 -->
+    <div id="big">这是一段巨大的文字</div>
+    <div id="big">这也是一段巨大的文字</div>
+    <!-- 在不加js的情况下id可以复用,但是引入js后此种写法会出错 -->
+    <!-- 注意详见笔记 -->
+</body>
+</html>

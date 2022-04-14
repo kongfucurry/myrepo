@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本样式</title>
+    <style>
+        p {
+            text-indent: 2em;   /*首行缩进*/
+        }
+        h1 {
+            text-align: center; /*设置水平对齐方式,对所有内容都有效*/
+        }
+        body {
+            text-align: left;
+            /* 对于图像在内的所有内容,此对齐方式都有效 */
+        }
+        div {
+            text-decoration: underline;
+            /* 对文本进行修饰,underline(下划线),line-through(删除线),overline(上划线),none(无) */
+        }
+        a {
+            text-decoration: none;
+            /* 可以用none来去除标签本身默认的文本样式 */
+        }
+        p {
+            line-height: 3;/*设置一段文字中每一行的间距*/
+            /* 可以放入font属性连写中,size/line-height */
+        }
+    </style>
+</head>
+<body>
+    <p style="text-align: left;">HTML的全称为超文本标记语言，是一种标记语言。它包括一系列标签．通过这些标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。HTML文本是由HTML命令组成的描述性文本，HTML命令可以说明文字，图形、动画、声音、表格、链接等。超文本是一种组织信息的方式，它通过超级链接方法将文本中的文字、图表与其他信息媒体相关联。这些相互关联的信息媒体可能在同一文本中，也可能是其他文件，或是地理位置相距遥远的某台计算机上的文件。这种组织信息方式将分布在不同位置的信息资源用随机方式进行连接，为人们查找，检索信息提供方便</p>
+    <hr>
+
+    <h1>html的百度百科</h1>
+    <img src="../素材/发现号.jpg" width="200">
+    <div>这段素材需要下划线</div>
+    <a href="基础学习" target="blank">这是一个超链接</a>
+</body>
+</html>

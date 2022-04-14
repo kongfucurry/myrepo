@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+    <!-- 相对定位 -->
+    <!-- <style>
+        .box{
+            position: relative;
+            /* 如果left和right同时出现以left为准 */
+            /* 如果top和bottom同时出现以top为准 */
+            left: 100px;
+            top: 200px;
+            /* 相对定位占有原来的文指 */
+            /* 仍然具有原本的标签显示特点 */
+            /* 基于自己原本的位置进行改变 */
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style> -->
+
+    <!-- 绝对定位 -->
+    <!-- <style>
+        .box{
+            /* 先找已定位的父级 ，若有这样的父级为参照物进行定位*/
+            /* 有父级但没定位，以浏览器窗口为参照进行定位 */
+            position: absolute;
+            /* 脱标，不占位置 */
+            /* 会改变原来标签的显示模式，改为行内块 */
+            left: 200px;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style> -->
+
+    <!-- 子绝父相 -->
+    <!-- 意味子级一般用绝对定位，父级一般用相对定位 -->
+    <!-- <style>
+        .father{
+            
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+        .son{
+            /* 如果有子元素需要定位，父级一般使用相对定位,子级采用绝对定位 */
+            position: relative;
+            left: 300px;
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+        }
+        .sun{
+            position: absolute;
+            left: 20px;
+            top: 30px;
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+    </style> -->
+
+    <!-- 水平居中案例 -->
+    <style>
+        .box1{
+            position: absolute;
+            /* left: 50%; */
+            top: 50%;
+            transform: translate(0,-50%);
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <div class="box"></div>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p> -->
+    <!-- <div class="father">
+        <div class="son">
+            <div class="sun"></div>
+        </div>
+    </div> -->
+    <div class="box1"></div>
+    
+</body>
+</html>

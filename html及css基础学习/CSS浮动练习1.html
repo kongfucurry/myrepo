@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS浮动练习</title>
+    <style>
+        .top{
+            height: 40px;
+            background-color: #000;
+        }
+        .sec{
+            width: 1226px;
+            height: 100px;
+            background-color: #ffc0cb;
+            margin: 0 auto;
+        }
+        /* 浮动的元素需要居中，所以需要一个div把浮动元素框起来 */
+        .outer{
+            width: 1226px;
+            height: 460px;
+            margin: 0 auto;
+        }
+        .left{
+            float: left;
+            width: 234px;
+            height: 460px;
+            background-color: #ffa500;
+        }
+        .right{
+            /* float: right; */
+            float: left;
+            width: 992px;
+            height: 460px;
+            background-color: #87ceeb;
+        }
+    </style>
+</head>
+<body>
+    <div class="top"></div>
+    <div class="sec"></div>
+    <div class="outer">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

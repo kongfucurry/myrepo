@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体和文本样式的学习</title>
+    <style>
+        p {
+            font-size: 30px;   /*控制字体的大小*/
+            font-weight: 900;  /*控制字体的粗细,属性值:100~900,也可以有两种单词写法,normal=400,bold=700*/ 
+            font-style:italic; /*控制字体倾斜,normal不倾斜,italic字体自带倾斜,oblique强制使字体右倾*/
+            font-family: 微软雅黑,黑体,sans-serif;  /*根据用户安装的字体从左到右的顺序选择字体显示,若都有没有安装,则在最后的总体系列中选一个显示*/
+        }
+        h1 {
+            /* font属性连写 */
+            /* font: style weight size 字体 */
+            font: normal 100 20px 微软雅黑 ;
+            /* 一个属性冒号后书写多个值的写法称为"复合属性" */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 浏览器中默认的字号是16 -->
+    <p>这是一段文字</p>
+    <h1>这是一个标题</h1>
+</body>
+</html>

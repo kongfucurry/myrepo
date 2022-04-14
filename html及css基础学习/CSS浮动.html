@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS浮动</title>
+    <!-- 结构伪类选择器 -->
+    <!-- <style>
+        /* 匹配第一个子元素 */
+        li:first-child{
+            color: red;
+        }
+        /* 匹配到最后一个子元素 */
+        li:last-child{
+            color: blue;
+        }
+        /* 匹配到顺序第n个子元素 */
+        li:nth-child(5){
+            color: pink;
+        }
+        /* 匹配到倒数第n个子元素 */
+        li:nth-last-child(5){
+            color: yellow;
+        }
+        /* 带nth的选择器可以在括号内填写公式来选择多个元素 */
+        /* 偶数：2n或even */
+        li:nth-child(even){
+            font-size: 20px;
+        }
+        /* 奇数：2n-1或odd */
+        li:nth-child(odd){
+            font-size: 30px;
+        }
+        /* 前x个：-n-x */
+        li:nth-child(-n+3){
+            text-decoration: underline;
+        }
+        /* 从第x个往后 */
+        li:nth-child(n+5){
+            text-decoration: line-through;
+        }
+        /* 4的倍数个 */
+        li:nth-child(4n){
+            background-color: pink;
+        }
+    </style> -->
+    <!-- ------------------------------------------ -->
+    <!-- <style>
+        /* 伪元素 通常用于装饰性 */
+        .father{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+        /* 伪元素需要嵌套在一个父级中，且必须要有content属性才能生效 */
+        /* ::before表示在父元素前面添加内容 */
+        .father::before{
+            content:"没人" ;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: blue; 
+        }
+        /* ::after表示在父元素后面添加内容 */
+        .father::after{
+            color: red;
+            content: "擦眼泪";
+            font-size: 30px;
+        }
+        /* 伪元素中可以添加通用的一些属性，如控制大小和文字的属性，但要注意的是，伪元素默认显示方式为行内元素，若要修改宽高可以使用display属性修改显示模式 */
+    </style> -->
+    <!-- ------------------------------------------ -->
+
+    <!-- <style>
+        /* 浮动 */        
+
+        /* 用转换显示模式解决div同行排列 */
+        /* div{
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            
+        }
+        .two{
+            background-color: grey;
+        } */
+        /* 浏览器在解析行内块或行内标签的时候，如果标标签之间不在一行就会产生一个空格的距离，所以在开发中一般不用转显示模式的方法进行排版 */
+            
+        /* 浮动的代码 */
+        /* div{
+            width: 200px;
+            height: 200px;
+        }        
+        .one{
+            background-color: pink;
+            float: left;
+        }
+        .two{
+            background-color: grey;
+            float: right;
+        } */
+        /* float:left向左浮动，float:right向右浮动 */
+
+        /* 浮动的特点 */
+        .one{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            float: left;
+        }
+        /* 使用float属性会使元素素脱标，是其不占用标准流的位置，因此浮动的元素会被其他元素框在里面，但是显示的内容不会进入到浮动元素中（半脱标） */
+
+        .two{
+            width: 200px;
+            height: 200px;
+            background-color: grey;
+            float: left;
+        }
+        /* 浮动的标签是顶对其的，可以通过对浮动元素增加margin来是其移动位置 */
+        
+        .three{
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+        }
+        /* 浮动后的元素能够在一行排列并且能够设置宽高，相当于拥有了行内块的特点 */
+
+        /* 浮动后的元素不能通过text-align:center;或margin:0 auto;进行居中了 */
+    </style> -->
+    <!-- ------------------------------------------ -->
+
+    <!-- <style>
+        .top{
+            /* height: 300px; */
+            width: 1000px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+        .bottom{
+            height: 100px;
+            background-color: green;
+        }
+        .left{
+            float: left;
+            width: 200px;
+            height: 300px;
+            background-color: #ccc;
+        }
+        .right{
+            float: right;
+            width: 790px;
+            height: 300px;
+            background-color: blue;
+        }
+        /* 父子级标签，子级浮动，父级无高度，之后的标准流标签会受影响，会显示到上面的位置 */
+        .clearfix{
+            clear: both;
+        }
+        /* 清楚左右两侧浮动的影响 */
+    </style> -->
+    <!-- ----------------------------------------- -->
+    
+    <!-- 单伪元素清除法 -->
+    <!-- <style>
+        .top{
+            /* height: 300px; */
+            width: 1000px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+        .bottom{
+            height: 100px;
+            background-color: green;
+        }
+        .left{
+            float: left;
+            width: 200px;
+            height: 300px;
+            background-color: #ccc;
+        }
+        .right{
+            float: right;
+            width: 790px;
+            height: 300px;
+            background-color: blue;
+        }
+        /*清除浮动的代码*/
+        .clearfix::after{
+           content: ""; 
+           /* 伪元素添加的是行内元素，而该方法需要块级元素，所以需要转换显示模式 */
+           display: block;
+           clear: both;
+           /* 为了兼容性 */
+           height: 0;
+           visibility: hidden;
+        }
+    </style> -->
+    <!-- ----------------------------------------- -->
+
+    <!-- 双伪元素清楚法 -->
+    <!-- <style>
+        .top{
+            /* height: 300px; */
+            width: 1000px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+        .bottom{
+            height: 100px;
+            background-color: green;
+        }
+        .left{
+            float: left;
+            width: 200px;
+            height: 300px;
+            background-color: #ccc;
+        }
+        .right{
+            float: right;
+            width: 790px;
+            height: 300px;
+            background-color: blue;
+        }
+        
+        /*清除浮动的代码*/
+        /* .clearfix::before作用：解决外边距塌陷问题 */
+        .clearfix::before,
+        .clearfix::after{
+            content: '';
+            display: table;
+        }
+        /* 真正清除浮动的标签 */
+        .clearfix::after{
+            clear: both;
+        }
+        </style> -->
+        <!-- ------------------------------------ -->
+
+        <!-- 给父元素添加overflow:hidden方法 -->
+        <style>
+            .top{
+                /* height: 300px; */
+                width: 1000px;
+                background-color: pink;
+                margin: 0 auto;
+                /* 直接在这里添加overflow:hidden属性，方便快捷 */
+                overflow: hidden;
+            }
+            .bottom{
+                height: 100px;
+                background-color: green;
+            }
+            .left{
+                float: left;
+                width: 200px;
+                height: 300px;
+                background-color: #ccc;
+            }
+            .right{
+                float: right;
+                width: 790px;
+                height: 300px;
+                background-color: blue;
+            }
+        </style>
+</head>
+<body>
+    <!-- 结构伪类选择器 -->
+    <!-- <ul>
+        <li>这是第1个li</li>
+        <li>这是第2个li</li>
+        <li>这是第3个li</li>
+        <li>这是第4个li</li>
+        <li>这是第5个li</li>
+        <li>这是第6个li</li>
+        <li>这是第7个li</li>
+        <li>这是第8个li</li>
+    </ul> -->
+    <!-- z----------------------------------------- -->
+
+    <!-- 伪元素 通常用于装饰性 -->
+    <!-- <div class="father">帮你</div> -->
+    <!-- ----------------------------------------- -->
+
+    <!-- 浮动 -->
+    <!-- <div class="one">这是第一个div标签</div>
+    <div class="two">这是第二个div标签</div>
+    <div class="three">这是第三个div标签</div> -->
+    <!-- ----------------------------------------- -->
+
+    <!-- 清除浮动 -->
+    <!-- <div class="top">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="bottom">底部div</div> -->
+    <!-- ----------------------------------------- -->
+
+    <!-- 单伪元素清除法 -->
+    <!-- 用伪元素替代额外标签 -->
+     <!-- <div class="top clearfix">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <div class="bottom">底部div</div> -->
+<!-- ----------------------------------------- -->
+    <!-- 双伪元素清除法 -->
+    <!-- <div class="top clearfix">
+       <div class="left"></div>
+       <div class="right"></div>
+   </div>
+   <div class="bottom">底部div</div> -->
+    <!-----------------------------------------------  -->
+   
+    <!-- 给父元素添加overflow:hidden方法 -->
+   <div class="top">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <div class="bottom">底部div</div>
+</body>
+</html>

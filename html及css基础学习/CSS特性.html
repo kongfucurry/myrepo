@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS特性</title>
+    <style>
+        /* div{
+            color: red;
+            font-size: 30px;
+        } */
+        /* --------------------------------------------------- */
+        
+        /* div{
+            font-size: 10px;
+            color: pink;
+        }
+        .box{
+            font-size: 30px;
+            color: yellow;
+        } */
+
+        div{
+            color: pink;
+        }
+        .box{
+            color: yellow;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 继承性 -->
+    <!-- <div>
+        这是一个div
+        <span>这是div中的一个span</span>
+    </div> -->
+    <!-- 所有控制文字的都能继承，不是控制文字的一律不能继承 -->
+    <!-- 如果元素有默认样式，此时继承性依然存在，但是有限显示浏览器的默认模式 -->
+    <!-- ----------------------------------------------------- -->
+    
+    <!-- 层叠性 -->
+    <!-- <div class="box">这是一个div容器</div> -->
+    <!-- 当样式冲突时，只有当选择器优先级相同时，才能通过层叠性判断结果 -->
+    <!-- 写在后面的属性能够覆盖写在前面的属性，使得后面的生效。当有多个种类的选择器时，相同属性写在后面的生效，其余的都生效 -->
+    <!-- ----------------------------------------------------- -->
+
+    <!-- 优先级 -->
+    <div class="box" id="one">这是一段文字</div>
+    <!-- 优先顺序：继承<通配符选择器<类选择器<id选择器<行内样式<!important -->
+</body>
+</html>

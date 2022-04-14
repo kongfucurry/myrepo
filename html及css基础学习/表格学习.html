@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格学习</title>
+</head>
+<body>
+    <!-- 无序列表 -->
+    <ul> 
+        <!-- ul表示创建一个无顺序列表，ul里面只能放li标签 -->
+        <li>
+            这是一个无顺序的列表
+            <!-- li表示列表中的一个表项，里面可以存放任意内容 -->
+        </li>
+    </ul>
+    <hr>
+    <!-- 有序列表 -->
+    <ol>
+        <!-- 列表中的每一项会在开头有顺序标识，ol中只能够存放li标签 -->
+        <li>语文：119</li>
+        <li>数学：125</li>
+        <li>英语：133</li>
+        <!-- li中能存放任意内容 -->
+    </ol>
+    <hr>
+    <!-- 自定义列表 -->
+    <dl>
+        <!-- dt表示自定义列表的主题 -->
+        <dt>本次成绩汇总</dt>
+        <dd>语文</dd>
+        <dd>数学</dd>
+        <dd>英语</dd>
+        <!-- dt标签中只允许包含dt/dd标签    dt/dd标签中可以包含任意内容 -->
+    </dl>
+    <hr>
+<!-- ------------------------------------------------------------------------- -->
+    <!-- 表格 -->
+    <table border="1" width="200" height="200">
+        <!-- table是表格整体，可包裹多个tr -->  
+        <tr>
+            <!--  tr表示每一行，可用于包裹多个td-->
+            <td>
+                <!-- 表示每一个单元格，用于填写内容 -->
+                姓名
+            </td>
+            <td>成绩</td>
+            <td>评语</td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>90分</td>
+            <td>优秀</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>80</td>
+            <td>一般</td>
+        </tr>
+        <tr>
+            <td>王五</td>
+            <td>70</td>
+            <td>还需努力</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- ------------------------------------------------------------------------- -->
+    <!-- 表格标题和表头单元格 -->
+    <table border="1" width="200" height="200">
+        <!-- 在table内部可用caption为表格添加一个标题 -->
+        <caption><strong>学生成绩单</strong></caption>
+        <tr>
+            <!-- 此处在tr中使用th可以将该单元格变为表头单元格，可使此项加粗 -->
+            <th>姓名</th>
+            <th>成绩</th>
+            <th>评语</th>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>90分</td>
+            <td>优秀</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>80</td>
+            <td>一般</td>
+        </tr>
+        <tr>
+            <td>王五</td>
+            <td>70</td>
+            <td>还需努力</td>
+        </tr>
+    </table>
+    <hr>
+<!-- ------------------------------------------------------------------------- -->
+    <!-- 合并单元格 -->
+    <table border="1" width="200" height="200">
+        <caption><strong>学生成绩单</strong></caption>
+        <!-- 左上原则，上下合并（跨行）保留最上，左右合并（跨列） -->
+        <tr>
+            <th>姓名</th>
+            <th>成绩</th>
+            <th>评语</th>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td rowspan="2">90分</td>
+            <td>优秀</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <!-- <td>80</td> -->
+            <td>一般</td>
+        </tr>
+        <tr>
+            <td>王五</td>
+            <td colspan="2">70</td>
+            <!-- <td>还需努力</td> -->
+        </tr>
+    </table>
+</body>
+</html>
