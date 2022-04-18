@@ -1,0 +1,467 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+/* 用于美化首页 */
+body{
+    background-color: #f3f5f7;
+}
+
+/* 消除超链接的下划线 */
+a{
+    text-decoration: none;
+}
+
+/* 消除表格的开头的圆点 */
+li{
+    list-style: none;
+}
+
+/* 消除浮动影响 */
+.clearfix::before,.clearfix::after{
+    content: '';
+    display: table;
+}
+.clearfix::after{
+    clear: both;
+}
+
+/* 版心 */
+.wrapper{
+    width: 1200px;
+    margin: auto;
+    /* background-color: pink; */
+}
+/* ↑↑↑↑↑↑网页的默认样式 */
+/* 头部 */
+.header{
+    height: 42px;
+    /* background-color: pink; */
+    margin: 30px auto;
+}
+
+h1{
+    float: left;
+}
+
+/* 导航 */
+.nav{
+    float: left;
+    margin-left: 70px;
+    height: 42px;
+}
+
+.nav li{
+    float: left;
+    margin-right: 26px;
+}
+
+.nav li a{
+    display: inline-block;
+    padding:  0 9px;
+    height: 42px;
+    line-height: 42px;
+    font-family: MicrosoftYaHei;
+	font-size: 18px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 2px;
+	color: #050505;
+}
+.nav li:hover{
+    border-bottom: 2px solid #00a4ff;
+}
+/* 导航栏css结束 */
+
+/* 搜索栏css */
+.search{
+    float: left;
+    margin-left: 59px;
+    width: 412px;
+    height: 40px;
+    border: solid 1px #00a4ff;;
+}
+/* 搜索文本框 */
+.search input{
+    float: left;
+    width: 340px;
+    padding-left: 21px;
+    border: 0;
+    height: 40px;
+    outline: none;
+    background-color: #f3f5f7;
+}
+/* 选择placeholder地选择器 */
+.search input::placeholder{
+	font-family: MicrosoftYaHei;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 40px;
+	letter-spacing: 0px;
+	color: #bfbfbf;
+}
+/* 搜索按钮 */
+.search button a{
+    float: left;
+    width: 51px;
+    height: 40px;
+    background-image: url(../images/btn.png);
+}
+
+/* 用户头像以及信息 */
+.user{
+    float: left;
+    margin-left: 30px;
+	height: 42px;
+    line-height: 42px;
+}
+.user img{
+    /* 调节图片垂直对齐方式👇 */
+    vertical-align: middle;
+    width: 33px;
+    height: 33px;
+}
+
+/* 轮播图 */
+.banner{
+    height: 420px;
+    background-color: #1c036c;
+}
+.banner .wrapper{
+    height: 420px;
+    background-image: url(../images/banner2.png);
+}
+
+/* 左侧导航栏 */
+.banner .left{
+    float: left;
+    padding: 0 20px;
+    width: 190px;
+    height: 420px;
+    background-color: rgba(0,0,0,0.3);
+    /* 控制文字的属性，能够继承 */
+    line-height: 44px;
+}
+.left ul{
+    height: 420px;
+    margin-top: 12px;
+	font-family: MicrosoftYaHei;
+	font-size: 14px;
+	line-height: 44px;
+	letter-spacing: 1px;
+ }
+.left span{
+    float: right;
+}
+.left li a{
+    /* 想要使可点击的范围变大则需要添加float属性 */
+    float: left;
+    width: 190px;
+    height: 44px;
+    color: #fff;
+}
+.banner a:hover{
+    color: #00b4ff;
+}
+/* 右侧显示框总体 */
+.banner .right{
+    float: right;
+    margin-top: 50px;
+    width: 228px;
+	height: 320px;
+	background-color: #ffffff;
+}
+/* 右侧显示框头部 */
+.right h2{
+    width: 228px;
+    height: 48px;
+    background-color: #9bceea;
+    text-align: center;
+    line-height: 48px;
+    font-family: MicrosoftYaHei-Bold;
+	font-size: 18px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 2px;
+	color: #ffffff;
+}
+/* 右侧显示框中间 */
+.rmid ul{
+    padding: 18px 0;
+    border-bottom: 2px solid #e5e5e5;
+    margin-left: 19px;
+    width: 163px;
+	height: 33px;
+    font-family: FZLTCXHJW--GB1-0;
+    font-size: 16px;
+    line-height: 20px;
+    color: #4e4e4e;
+ }
+ .rmid li{
+    display: inline-block;
+    font-family: FZLTCXHJW--GB1-0;
+	font-size: 14px;
+	font-weight: bold;
+	color: #4e4e4e;
+ }
+ .rmid p{
+    font-family: FZLTCXHJW--GB1-0;
+	font-size: 12px;
+	font-weight: bold;
+	color: #a5a5a5;
+ }
+
+ /* 右侧显示框底端 */
+ .rbottom a{
+    display: inline-block;
+    width: 200px;
+	height: 41px;
+    margin: 6px 0 0 14px;
+    line-height: 41px;
+    text-align: center;
+    font-family: MicrosoftYaHei;
+	font-size: 16px;
+	font-weight: bold;
+    color: #00a4ff;
+    border: solid 1px #00a4ff;
+ }
+ /* 精品推荐栏 */
+ .rec{
+     margin-top: 8px ;
+     height: 60px;
+     box-shadow: 0px 2px 3px 0px 
+		rgba(118, 118, 118, 0.2);
+     background-color: #fff
+ }
+ .rec ul{
+    /* display: inline-block; */
+    float: left;
+     margin-top: 21px;
+     /* 这里有一个隐藏的塌陷问题，需要转换成行内块 */
+     margin-left: 34px;
+     width: 1200px;
+     height: 18px;
+    font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #00a4ff;
+ }
+ .rec li{
+    /* display: inline-block; */
+    float: left;
+    /* width: 123px; */
+ }
+ .rec a{
+     padding : 0px 35px;
+     border-left: 1px solid #bfbfbf;
+     height: 16px;
+     font-family: MicrosoftYaHei;
+	font-size: 16px;
+	font-weight: normal;
+	letter-spacing: 0px;
+     color: #050505;
+ }
+ .rec #recommand{
+    padding-right: 35px;
+ }
+ .rec #alter{
+    float: right;
+    margin-right: 26px;
+ }
+ #alter a{
+    border: 0px;
+    font-family: MicrosoftYaHei;
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: 0px;
+	color: #00a4ff;
+ }
+ /* 精品课程推荐 */
+ .goods{
+     margin-top: 37px;
+    /* height: 595px; */
+    vertical-align:bottom ;
+ }
+ .goods h2{
+    float: left;
+    width: 80px;
+	height: 19px;
+	font-family: MicrosoftYaHei;
+	font-size: 20px;
+	font-weight: normal;
+	color: #494949;
+}
+.goods>a{
+    float: right;
+    margin-right: 30px;
+    width: 48px;
+	height: 11px;
+	font-family: MicrosoftYaHei;
+	font-size: 12px;
+	color: #a5a5a5;
+}
+.goods #course{
+    float: left;
+    margin-top: 28px;
+    margin-right: 5px;
+    width: 233px;
+	height: 270px;
+    background-color: #ffffff;
+	box-shadow: 0px 2px 5px 0px 
+		rgba(118, 118, 118, 0.5);
+}
+#course p{
+    margin: 20px 20px 0 20px;
+    /* width: 184px;
+	height: 32px; */
+	font-family: MicrosoftYaHei;
+	font-size: 14px;
+	line-height: 20px;
+}
+#course a{
+    color: #050505;
+}
+.goods #one{
+	font-family: MicrosoftYaHei;
+	font-size: 12px;
+	letter-spacing: 0px;
+	color: #ff7c2d;
+}
+.goods #two{
+    font-family: MicrosoftYaHei;
+	font-size: 12px;
+	color: #999999;
+}
+.goods .learning{
+    margin: 10px 0 0 23px ;
+}
+.goods .last{
+    margin: 0;
+}
+.course{
+    margin-top: 37px;
+}
+.course .chead{
+    height: 40px;
+}
+.course h2{
+    float: left;
+	font-family: MicrosoftYaHei;
+	font-size: 20px;
+	color: #494949;
+}
+.course .checkall{
+    float: right;
+    font-size: 12px;
+    line-height: 20px;
+    color: #a5a5a5;
+}
+
+.course .content li{
+    position: relative;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 228px;
+	height: 270px;
+	background-color: #ffffff;
+}
+.course .content li:hover{
+    box-shadow: 0px 3px 5px 0px 
+		rgba(118, 118, 118, 0.5);
+    transition: all 0.3s;
+}
+.course .content li a{
+    width: 228px;
+	height: 270px;
+}
+.course .content li:nth-child(5n){
+    margin-right: 0;
+}
+.course .content img{
+    width: 228px;
+}
+.course .content .label{
+    position: absolute;
+    right: -4px;
+    top: 4px;
+    width: 40px;
+    height: 20px;
+}
+.course .content h3{
+    margin: 20px 20px 0 20px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    color: #050505;
+}
+.course .content p{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 12px;
+    color: #999999;
+}
+.course .content span{
+    color: #ff7c2d;
+}
+/* 底部信息栏 */
+.footer{
+    margin-top: 40px;
+    height: 417px;
+    background-color: #fff;
+}
+.bottom .info{
+    float: left;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.bottom .info p{
+    margin-top: 25px;
+    font-size: 12px;
+    color: #666666;
+}
+.bottom .info #download{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 30px;
+    border: solid 1px #00a4ff;
+    width: 63px;
+	height: 15px;
+    line-height: 18px;
+    color: #00a4ff;
+}
+.bottom .links{
+    float: right;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+.bottom .links h4{
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #333333;
+    line-height: 21px;
+}
+.bottom .links li a{
+    display: block;
+    font-size: 12px;
+    font-family: SimSun;
+    line-height: 21px;
+    color: #333333;
+}
+.bottom .links li{
+    /* display: inline-block; */
+    float: left;
+    margin-right: 140px;
+}
+.bottom .links ul li:nth-child(3n){
+    margin-right: 0;
+}
+/* .bgc{
+    width: 1919px;
+    height: 417px;
+    background-color: #fff;
+} */
